@@ -1,0 +1,37 @@
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &__logo{
+    padding: 1rem 2rem;
+    font-size: 3rem;
+    &--text{
+      text-decoration: none;
+      color: $color-text;
+    }
+
+  }
+  &__nav{
+    font-size: $font-size-para;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+
+  }
+
+  &__nav-item{
+    padding: 1rem 1rem;
+  }
+
+
+  &__nav-link{
+    text-decoration: none;
+    color: $color-text;
+
+    &--current{
+      color:$color-primary;
+    }
+  }
+}

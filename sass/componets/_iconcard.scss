@@ -1,0 +1,14 @@
+.icon-card{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(3, min-content);
+  grid-gap: 3rem;
+
+  &__icon{
+    color: $color-primary;
+    display: inline;
+    grid-row:1/-1;
+    font-size: 5rem;
+    justify-self: flex-end;
+  }
+}

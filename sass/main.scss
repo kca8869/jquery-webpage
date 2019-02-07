@@ -1,0 +1,17 @@
+@import "abstract/mixins";
+@import "abstract/variables";
+@import "abstract/utilites";
+
+@import "base/reset";
+@import "base/typography";
+
+@import "componets/tripcard";
+@import "componets/iconcard";
+@import "componets/testimonial";
+
+@import "layout/footer";
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/grid";
+
+@import "pages/home";

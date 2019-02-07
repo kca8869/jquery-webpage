@@ -1,0 +1,114 @@
+.overlay{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: $grid-gap;
+  padding: 10rem;
+}
+
+.icon{
+  padding: 10rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.testimonials{
+  padding: 10rem;
+}
+
+.destinations{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: $grid-gap;
+  text-align: center;
+  padding: 10rem;
+  &__header,
+  &__sub-header{
+    grid-column: 1/-1;
+  }
+}
+ .parallax{
+   background-image: url("/images/hero_bg_2.jpg");
+   background-attachment: fixed;
+   background-position: center;
+   background-size: cover;
+   height: 500px;
+
+   &__video{
+     height: 100%;
+     background-color: rgba(0,0,0,.4);
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+      text-align: center;
+   }
+   &__play-circle{
+     align-self: center;
+     display: inline-block;
+     border: solid 2px white;
+     border-radius: 50%;
+     width: 10rem;
+     height: 10rem;
+     position: relative;
+     // position: absolute;
+     // top:20%;
+     //transform: translateX(-50%);
+     transition:all .4s;
+     &:hover{
+      transform: scale(1.5);
+    }
+      &:hover+h2{
+        transform: translateY(1.5rem);
+        }
+
+     }
+
+   &__play-triangle{
+     color: white;
+     font-size: 5rem;
+     line-height: 10rem;
+     position: absolute;
+     left: 2.9rem;
+   }
+   &__text{
+     font-size: 5rem;
+     color: white;
+     transition: all .4s;
+   }
+   &__text-box{
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+   }
+ }
+
+.services{
+  padding: 10rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: $grid-gap;
+  text-align: center;
+  background-color: #F8F9FA;
+  &__header,
+  &__sub-header{
+    grid-column: 1/-1;
+  }
+}
+
+.blog{
+  padding: 10rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: $grid-gap;
+  text-align: center;
+  border-bottom: solid 3px #F8F9FA;
+  &__header,
+  &__sub-header{
+    grid-column: 1/-1;
+  }
+}
+
+.cta{
+  padding: 2rem;
+  text-align: center;
+}
