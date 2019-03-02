@@ -1,26 +1,51 @@
+.modal{
+  z-index: 15;
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.8);
+}
+
 .overlay{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: $grid-gap;
-  padding: 10rem;
+  overflow: visible;
+  //z-index: 20;
+  margin-top: -25vh;
+  @include grid;
+  // display: grid;
+  grid-template-columns: $grid-column-3;
+  // grid-gap: $grid-gap;
+  // padding: 10rem;
 }
 
 .icon{
-  padding: 10rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  @include grid;
+  // padding: 10rem;
+  // display: grid;
+  grid-template-columns: $grid-column-3;
+  // grid-gap: 3rem;
 }
 
 .testimonials{
-  padding: 10rem;
+  background-color: $color-background;
+  padding: 10rem 0;
+  // @include respond(2){
+  //   padding: 10rem 2rem;
+  // }
+  // @include respond(1){
+  //   padding: 10rem 0;
+  // }
 }
 
 .destinations{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: $grid-gap;
+  @include grid;
+  // display: grid;
+  grid-template-columns: $grid-column-3;
+  // grid-gap: $grid-gap;
   text-align: center;
-  padding: 10rem;
+  // padding: 10rem;
   &__header,
   &__sub-header{
     grid-column: 1/-1;
@@ -58,7 +83,7 @@
       transform: scale(1.5);
     }
       &:hover+h2{
-        transform: translateY(1.5rem);
+        transform: translateY(2rem);
         }
 
      }
@@ -83,10 +108,11 @@
  }
 
 .services{
-  padding: 10rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: $grid-gap;
+  @include grid;
+  // padding: 10rem;
+  // display: grid;
+  grid-template-columns: $grid-column-3;
+  // grid-gap: $grid-gap;
   text-align: center;
   background-color: #F8F9FA;
   &__header,
@@ -96,10 +122,11 @@
 }
 
 .blog{
-  padding: 10rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: $grid-gap;
+  @include grid;
+  // padding: 10rem;
+  // display: grid;
+  grid-template-columns: $grid-column-2;
+  // grid-gap: $grid-gap;
   text-align: center;
   border-bottom: solid 3px #F8F9FA;
   &__header,
@@ -109,6 +136,10 @@
 }
 
 .cta{
+  & > *{
+    margin: 2rem;
+  }
+  margin: 2rem;
   padding: 2rem;
   text-align: center;
 }

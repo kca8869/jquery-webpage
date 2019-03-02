@@ -1,0 +1,38 @@
+.btn{
+  background-color: $color-primary;
+  padding: 2rem 4rem;
+  color: $color-white;
+  border: solid 2px $color-primary;
+
+  z-index: 1;
+  transition: $transition;
+
+  &--footer{
+    padding: 1rem 2rem;
+  }
+  &:hover{
+    background-color: transparent;
+    border: solid 2px $color-white;
+  }
+
+  &--reverse{
+    padding: 2rem 4rem;
+    color: $color-primary;
+    background-color: transparent;
+    border: solid 2px $color-primary;
+    transition: $transition;
+    &:hover{
+      color: $color-white;
+      background-color: $color-primary;
+      border: solid 2px $color-primary;
+    }
+  }
+  &--dark{
+    &:hover{
+
+      background-color: transparent;
+      border: solid 2px $color-text;;
+      color: $color-text;
+    }
+  }
+}

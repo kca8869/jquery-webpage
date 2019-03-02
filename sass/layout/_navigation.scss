@@ -1,10 +1,56 @@
-.navbar{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.hamburger{
+  display: none;
+  margin: 0 5rem;
+  justify-self: flex-end;
+  @include respond(2){
+    display: block;
+  }
+  &:hover > *:after{
+    top: 12px;
+  }
+  &:hover > *:before{
+    top: -12px;
+  }
+  &__line{
+    display: inline-block;
+    height: 3px;
+    width: 3rem;
+    background-color: $color-text;
+    position: relative;
 
+    &::after,
+    &::before{
+      content: "";
+      height: inherit;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      background-color: inherit;
+      transition: $transition;
+    }
+    &::after{
+      top: 10px;
+
+    }
+    &::before{
+      top: -10px;
+    }
+  }
+}
+
+.navbar{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  // display: flex;
+  // justify-content: space-around;
+  // align-items: center;
+  @include respond(2){
+    justify-content: space-between;
+  }
   &__logo{
-    padding: 1rem 2rem;
+    justify-self:center;
+    padding: 2rem 2rem;
     font-size: 3rem;
     &--text{
       text-decoration: none;
@@ -19,6 +65,13 @@
     justify-content: space-between;
     list-style: none;
 
+    &--footer{
+      flex-direction: column;
+    }
+    &--social{
+
+    justify-content: center;
+    }
   }
 
   &__nav-item{
@@ -29,9 +82,79 @@
   &__nav-link{
     text-decoration: none;
     color: $color-text;
+    &--footer{
+      color: $color-footer-text;
+      &:hover{
+        color: $color-white;
+      }
+    }
+
 
     &--current{
       color:$color-primary;
     }
   }
+}
+
+
+
+.mobile-nav{
+  display: flex;
+  justify-content: space-around;
+
+  @include respond(2){
+    padding: 5rem;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: $color-white;
+    z-index: 20;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    transition: $transition;
+  }
+
+  &__close{
+    font-size: 3rem;
+    display: none;
+    align-self: flex-end;
+    cursor: pointer;
+    @include respond(2){
+      display: block;
+    }
+  }
+}
+
+.header-menu{
+  & > ul{
+    @include respond(2){
+      flex-direction: column;
+    }
+  }
+
+}
+
+.destination-menu{
+  border-top: solid 2px $color-primary;
+  background-color: $color-white;
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  opacity: 0;
+  z-index: -2;
+
+
+  transition: all .4s;
+  & > ul{
+    flex-direction: column;
+    & > li{
+      padding: 1rem 2rem;
+      &:hover{
+        background-color: $color-background;
+      }
+    }
+  }
+
+
 }

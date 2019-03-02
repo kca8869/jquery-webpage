@@ -1,15 +1,43 @@
 .footer{
+  @include respond(2){
+    grid-template-columns: 1fr;
+    padding: 10rem 2rem;
+  };
   padding: 10rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: $grid-column-3;
   grid-gap: 2rem;
-  text-align: center;
+  //color: rgba($color-text,.8);
+  //text-align: center;
   background-color: $color-secondary;
   &__nav-box{
-    display: flex;
-    justify-content: space-between;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    line-height: 2.5rem;
   }
   &__box{
-
+    & > *{
+      margin: 2rem;
+    }
+  }
+  &__title{
+    color: $color-white;
+    font-size: $font-size-card;
+  }
+  &__text{
+    color: $color-footer-text;
+    font-size: $font-size-para;
+    line-height: 2.5rem;
+  }
+  &__email{
+    padding: 1rem 2rem;
+    background-color: transparent;
+    border: solid 2px $color-footer-text;
+    transition: $transition;
+    &:focus{
+      outline: none;
+      border-bottom: solid 4px $color-primary;
+    }
   }
 }

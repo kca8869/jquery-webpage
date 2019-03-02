@@ -1,0 +1,49 @@
+.slider{
+  //position: relative;
+  overflow: hidden;
+  width: 100vw;
+  &__arrow-box{
+    
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+  &__container{
+    width: calc(100vw *3);
+  }
+  &__slide{
+    // display: inline;
+   float: left;
+   width: 100vw;
+  }
+  &__left,
+  &__right{
+    z-index: 20;
+      border-radius: 50%;
+      height: 5rem;
+      width: 5rem;
+      position: absolute;
+      top:50%;
+      color: white;
+      background-color: rgba(0,0,0,.5);
+      text-align: center;
+      line-height: 5rem;
+      font-size: 3rem;
+      transition: $transition;
+      cursor: pointer;
+      &:hover{
+        background-color: black;
+      }
+
+      &--narrow{
+        position: relative;
+        top: 0;
+      }
+  }
+  &__left{
+    left:2rem;
+  }
+  &__right{
+    right:2rem;
+  }
+}

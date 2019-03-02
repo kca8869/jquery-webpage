@@ -1,8 +1,20 @@
 //colors
 $color-primary: #EF6C57;
+$color-primary-hover:#E81A23;
 $color-secondary: #333333;
 $color-text: black;
+$color-white: #fff;
+$color-background: #F8F9FA;
+$color-footer-text:#737373;
 //grid
 $grid-gap: 3rem;
+$grid-column-3: repeat(3, 1fr);
+$grid-column-2: repeat(2, 1fr);
 //font-size
 $font-size-para:1.5rem;
+//$font-size-quote:
+$font-size-main-header:5rem;
+$font-size-card:2.5rem;
+$font-size-section-header:3rem;
+//tranistions
+$transition: all .4s;

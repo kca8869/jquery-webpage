@@ -1,1 +1,17 @@
+.section-header{
+  color: $color-text;
+  font-size: $font-size-section-header;
+}
 
+.section-sub-header{
+  color: rgba($color-text,.8);
+  font-size: $font-size-para;
+}
+
+a{
+  transition: $transition;
+  text-decoration: none;
+  &:hover{
+    color: $color-primary-hover;
+  }
+}

@@ -5,6 +5,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+*::selection{
+  color: $color-white;
+  background-color: $color-text;
+}
 
 html{
   font-size: 62.5%;
@@ -12,6 +16,7 @@ html{
 img{
   width: 100%;
 }
+
 body{
 
 }

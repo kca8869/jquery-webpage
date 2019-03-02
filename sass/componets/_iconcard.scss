@@ -1,6 +1,6 @@
 .icon-card{
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 3fr;
   grid-template-rows: repeat(3, min-content);
   grid-gap: 3rem;
 
@@ -9,6 +9,22 @@
     display: inline;
     grid-row:1/-1;
     font-size: 5rem;
-    justify-self: flex-end;
+    justify-self: flex-start;
+  }
+
+  &__heading{
+    color: $color-text;
+    font-size: $font-size-card;
+  }
+  &__text{
+    color: $color-text;
+    font-size: $font-size-para;
+  }
+
+  &__link{
+    text-transform: capitalize;
+    color: $color-primary;
+    font-size: $font-size-card;
+    text-decoration: none;
   }
 }

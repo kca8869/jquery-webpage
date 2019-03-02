@@ -1,0 +1,30 @@
+
+@mixin grid{
+    @media only screen and (min-width:1000px){
+      display: grid;
+      // grid-template-columns: repeat(3, 1fr);
+      grid-gap: $grid-gap;
+      padding: 10rem
+    }
+    @media only screen and (max-width:1000px){
+     display: grid;
+      grid-template-columns: $grid-column-2;
+      padding: 10rem 2rem;
+     grid-gap: $grid-gap;
+    }
+    @media only screen and (max-width:600px){
+     display: grid;
+      grid-template-columns: 1fr;
+     grid-gap: $grid-gap;
+    // padding: 10rem 0;
+    }
+}
+
+@mixin respond($columns){
+  @if $columns==2 {
+    @media only screen and (max-width:1000px){@content};
+  };
+  @if $columns==1 {
+    @media only screen and (max-width:1000px){@content};
+  };
+}

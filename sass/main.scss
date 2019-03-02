@@ -1,5 +1,6 @@
-@import "abstract/mixins";
 @import "abstract/variables";
+@import "abstract/mixins";
+
 @import "abstract/utilites";
 
 @import "base/reset";
@@ -8,10 +9,14 @@
 @import "componets/tripcard";
 @import "componets/iconcard";
 @import "componets/testimonial";
+@import "componets/btn";
+@import "componets/blog-card";
+@import "componets/slider";
+@import "componets/modal";
 
 @import "layout/footer";
 @import "layout/header";
 @import "layout/navigation";
 @import "layout/grid";
 
-@import "pages/home";
+@import "pages/home"; 
