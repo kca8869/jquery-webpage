@@ -124,7 +124,7 @@
 .blog{
   @include grid;
   // padding: 10rem;
-  // display: grid;
+  // display: grid; 
   grid-template-columns: $grid-column-2;
   // grid-gap: $grid-gap;
   text-align: center;
